@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top dark-nav">
+      <div class="container">
+        <a href="#" class="navbar-brand">Muhammad Hafiz</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About me</a>
+            </li>
+            <li class="nav-item">
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   <!-- Showcase -->
+    <section class="bg-secondary text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <!-- Left side: Text content -->
+        <div class="col-md-6">
+          <h1>Hello, I'm <span class="text-dark">Muhammad Hafiz</span></h1>
+          <p class="lead my-4">Programmer/Learner by day</p>
+          <p>Avid hobby enjoyer by night</p>
+        </div>
+        <!-- Right side: Image -->
+        <!-- <div class="col-md-6 text-center">
+          <img src="images/portrait.png" class="img-fluid rounded" alt="Muhammad Hafiz">
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+    <!-- Learn Sections -->
+    <section id="about" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>About me</h2>
+            <p class="lead">
+                Hello! I'm Hafiz, a student at Republic Polytechnic and an ex student at ITE Central,
+                passionate about learning new things and creating in intuitive experiences.
+            </p>
+            <a href="about.html" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Portfolio</h2>
+            <p class="lead">
+              Notable works
+            <a href="portfolio.html" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a>
+          </div>
+          <div class="col-md">
+            <img src="img/react.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact me</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Personal email:</span>
+                <a href="mailto:hvfxz21@gmail.com">hvfxz21@gmail.com</a>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Work email:</span>
+                <a href="mailto:23043274@myrp.edu.sg">23043274@myrp.edu.sg</a>
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Linkedin:</span> 
+                <a href="https://www.linkedin.com/in/muhammad-hafiz-707347279/" target="_blank" rel="noopener noreferrer">Muhammad Hafiz</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+        body {
+          font-family: 'Open Sans', sans-serif;
+          background-color: grey;
+        }
+      </style>
+      
+  </body>
+</html>
