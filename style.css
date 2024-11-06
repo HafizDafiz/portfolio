@@ -1,19 +1,46 @@
-body::before {
-    display: block;
-    content: '';
-    height: 60px;
+/* style.css */
+
+/* Animation for navbar */
+.navbar {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+/* Navbar styling */
+.navbar-expand-lg {
+  width: 100%; /* Makes navbar wider */
+  margin: 0 auto; /* Centers the navbar */
+}
+
+/* Hover effect for navbar links */
+.navbar-nav .nav-link {
+  position: relative;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f9d342;
+}
+
+.custom-top-padding {
+  padding-top: 6rem;
+}
+
+/* Slide-in animation keyframes */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
-  
-  #map {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @media (min-width: 768px) {
-    .news-input {
-      width: 50%;
-    }
-    
-  }
-  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: grey;
+}
