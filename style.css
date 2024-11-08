@@ -28,9 +28,7 @@
   padding-top: 6rem;
 }
 .portfolio-img {
-  width: 450px;
-  height: 450px;
-  object-fit: fill;
+    object-fit: fill;
   cursor: pointer;
 }
 .showcase-section {
