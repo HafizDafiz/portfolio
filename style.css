@@ -27,6 +27,36 @@
 .custom-top-padding {
   padding-top: 6rem;
 }
+.portfolio-img {
+  width: 450px;
+  height: 450px;
+  object-fit: fill;
+  cursor: pointer;
+}
+.showcase-section {
+  background-color: #3DCCC7;
+}
+.learn-section {
+  background-color: #68D8D6;
+  color: #ffffff;
+}
+
+.portfolio-section {
+  background-color: #9CEAEF;
+  color: #6c757d;
+}
+
+.contact-section {
+  background-color: #9CEAEF;
+  color: #ffffff;
+}
+
+.contact-section .list-group-item {
+  background-color: transparent;
+  border: none; /* Optional: Removes the borders for a cleaner look */
+}
+
+
 
 /* Slide-in animation keyframes */
 @keyframes slideDown {
