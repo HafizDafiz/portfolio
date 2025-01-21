@@ -1,74 +1,317 @@
-/* style.css */
-
-/* Animation for navbar */
-.navbar {
-  opacity: 0;
-  transform: translateY(-100px);
-  animation: slideDown 0.8s ease-out forwards;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
 }
 
-/* Navbar styling */
-.navbar-expand-lg {
-  width: 100%; /* Makes navbar wider */
-  margin: 0 auto; /* Centers the navbar */
-}
-
-/* Hover effect for navbar links */
-.navbar-nav .nav-link {
-  position: relative;
-  color: transparent;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f9d342;
-}
-
-.custom-top-padding {
-  padding-top: 6rem;
-}
-.portfolio-img {
-    object-fit: fill;
-  cursor: pointer;
-}
-.showcase-section {
-  background-color: #3DCCC7;
-}
-.learn-section {
-  background-color: #68D8D6;
-  color: #ffffff;
-}
-
-.portfolio-section {
-  background-color: #9CEAEF;
-  color: #6c757d;
-}
-
-.contact-section {
-  background-color: #9CEAEF;
-  color: #ffffff;
-}
-
-.contact-section .list-group-item {
-  background-color: transparent;
-  border: none; /* Optional: Removes the borders for a cleaner look */
-}
-
-
-
-/* Slide-in animation keyframes */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+html {
+  overflow-x: hidden;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: grey;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(225deg, 	#005b96, #03396c, #011f4b);
+  animation: color 5s ease-in-out infinite;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: black;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.logo span {
+  color: grey;
+
+}
+
+.hamburg,
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #3DCCC7;
+  font-size: 2rem;
+  display: none;
+}
+
+.nav-container .links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-container .links a {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3DCCC7;
+  text-decoration: none;
+  font-weight: 500;
+  transform: 0.3s linear;
+}
+
+.nav-container .links a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #68D8D6;
+  transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+  width: 100%;
+}
+
+.nav-container .contact-btn {
+  background-color: transparent;
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 2px solid #3DCCC7;
+  transition: 0.2s linear;
+}
+
+.nav-container .contact-btn a {
+  color: #9CEAEF;
+  transition: 0.3s linear;
+}
+
+.nav-container .contact-btn:hover,
+.nav-container .contact-btn:hover a {
+  background-color: #3DCCC7;
+  color: white;
+}
+
+.nav-container .links a:hover {
+  color: #9CEAEF;
+}
+
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  height: auto;
+  backdrop-filter: brightness(40%) blur(3px);
+  box-shadow: 0 0 20px #3DCCC7;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a {
+  color: #9CEAEF;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+  background-color: #68D8D6;
+}
+
+section {
+  width: 100%;
+  height: 90vh;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main-container .image {
+  z-index: -1;
+  width: 50%;
+}
+
+.main-container .image img {
+  width: 100%;
+}
+
+.main-container .content {
+  color: #3DCCC7;
+  width: 40%;
+  min-height: 100px;
+}
+
+
+
+.content h1 {
+  font-size: 32px;
+}
+
+.content h1 span {
+  color: #9CEAEF;
+  text-shadow: 0 0 10px #68D8D6;
+}
+
+.content .typewriter {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.content .typewriter span {
+  color: #68D8D6;
+  font-size: 2.5rem;
+  text-shadow: 0 0 5px #3DCCC7;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.typewriter span::before {
+  content: "Developer";
+  animation: words 15s infinite;
+}
+
+.typewriter span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #9CEAEF;
+  animation: cursor 0.6s linear infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #68D8D6;
+  }
+}
+
+@keyframes words {
+  0%,
+  33% {
+    content: "Developer";
+  }
+  34%,
+  66% {
+    content: "UI/UX Designer";
+  }
+  67%,
+  100% {
+    content: "Learner";
+  }
+}
+
+.content p {
+  font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+  margin: 10px 0;
+}
+
+.social-links i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 0.2rem solid #68D8D6;
+  border-radius: 50%;
+  color: #3DCCC7;
+  margin: 5px 10px;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+}
+
+.social-links i:hover {
+  scale: 1.3;
+  color: white;
+  background-color: #3DCCC7;
+  filter: drop-shadow(0 0 10px #9CEAEF);
+}
+
+.content button {
+  width: 40%;
+  height: 6vh;
+  margin: 30px;
+  background-color: #3DCCC7;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+.content button:hover {
+  scale: 1.1;
+  color: #68D8D6;
+  border: 2px solid #3DCCC7;
+  background-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 0 40px #3DCCC7;
+}
+
+
+@media (max-width: 884px) {
+  body {
+    overflow-y: visible;
+  }
+
+  nav .logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-container .links {
+    display: none;
+  }
+
+  .hamburg,
+  .cancel {
+    display: block;
+  }
+
+  .main-container .content {
+    width: 80%;
+  }
+
+  .social-links i {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .cancel {
+    color: white;
+  }
+
+  .main-container .image {
+    width: 80%;
+    margin-bottom: 0px;
+  }
 }
