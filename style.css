@@ -12,6 +12,7 @@ html {
 body {
   height: 100%;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
   background: linear-gradient(225deg, 	#005b96, #03396c, #011f4b);
   animation: color 5s ease-in-out infinite;
 }
@@ -165,20 +166,24 @@ section {
 .content h1 {
   font-size: 32px;
 }
+.content h2 {
+  font-size: 24px;
+}
 
 .content h1 span {
   color: #9CEAEF;
   text-shadow: 0 0 10px #68D8D6;
+  font-size: 40px;
 }
 
 .content .typewriter {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 40px;
 }
 
 .content .typewriter span {
   color: #68D8D6;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-shadow: 0 0 5px #3DCCC7;
   position: relative;
   transition: 0.3s linear;
@@ -393,7 +398,6 @@ section.left .socialMedia{
 	color: dodgerblue;
 }
 
-/* Code for the right section (column) */
 
 
 @media (max-width: 884px) {
